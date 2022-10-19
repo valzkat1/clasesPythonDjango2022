@@ -54,7 +54,7 @@ ROOT_URLCONF = 'Primeraweb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['E:/BVC/reposa2censo/clasesPythonDjango2022/ProyectosDjango/Primeraweb/Primeraweb/plantillas/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Primeraweb.views import despedida, index, saludo
+from Primeraweb.views import despedida, index, saludo,paginaplantilla,paginaPlantillaLoader
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('paginanueva/',index),
     path('paginasaludo/<str:nombre>',saludo),
-    path('paginadespedida/<int:edad>',despedida)
+    path('paginadespedida/<int:edad>',despedida),
+    path('plantilla/<str:nombre>',paginaplantilla),
+    path('tplLoader/',paginaPlantillaLoader)
 ]
