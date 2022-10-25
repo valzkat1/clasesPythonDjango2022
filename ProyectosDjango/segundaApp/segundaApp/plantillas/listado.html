@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+{% include 'menu.html' %}
+
+<table border="1">
+<thead>
+    <th>Nombre</th>
+    <th>Edad</th>
+    <th>Editar</th>
+</thead>
+<tbody>
+
+{% for person in listap  %}
+
+{{person.nombre}}
+
+{% endfor %}
+    <tr>
+        <td>Pepe</td>
+        <td>20</td>
+        <td><img src='https://w7.pngwing.com/pngs/740/67/png-transparent-computer-icons-icon-design-edit-angle-computer-data-thumbnail.png' width="30"/></td>
+    </tr>
+
+</tbody>
+<tfoot></tfoot>
+</table>
+
+
+</body>
+
+</html>

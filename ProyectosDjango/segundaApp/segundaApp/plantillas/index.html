@@ -7,6 +7,19 @@
 <center>
 
     <p> Bienvenidos al segundo proyecto </p>
+
+    <p> {{ mensaje }} </p>
+
+    {% if mensaje == "Cualquier dato a enviar a la plantilla" %}
+
+    <p> El mensaje es equivalente... </p>
+
+    {% else %}
+
+    <p>Mensajes diferentes... </p>
+
+    {% endif %}
+
 </center>
 
 

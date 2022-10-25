@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from segundaApp.views import index, nosotros
+#from segundaApp.views import index, nosotros
+from segundaApp import views
 
 # niveles de persistencia de datos
 # C R U D
@@ -23,6 +24,7 @@ from segundaApp.views import index, nosotros
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/',index),
-    path('nosotros/',nosotros)
+    path('home/',views.index),
+    path('nosotros/',views.nosotros),
+    path('listaPersonas/',views.recorrerLista)
 ]
