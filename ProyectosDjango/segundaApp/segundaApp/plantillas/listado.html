@@ -4,7 +4,9 @@
 <body>
 {% include 'menu.html' %}
 
-<table border="1">
+<!-- -->
+
+<table border="1" class="table">
 <thead>
     <th>Nombre</th>
     <th>Edad</th>
@@ -12,17 +14,23 @@
 </thead>
 <tbody>
 
+{% comment %}
+  ## informacion de documentacion o lo que sea necesario.
+  ## Responsividad (Acoplamiento a diferentes dimensiones de pantalla)  -- Skill de bootstrap
+
+{% endcomment %} 
+
 {% for person in listap  %}
-
-{{person.nombre}}
-
-{% endfor %}
     <tr>
-        <td>Pepe</td>
-        <td>20</td>
-        <td><img src='https://w7.pngwing.com/pngs/740/67/png-transparent-computer-icons-icon-design-edit-angle-computer-data-thumbnail.png' width="30"/></td>
+        <td>{{person.nombre}}</td>
+        <td>{{person.edad}}</td>
+        <td>
+            <a href="../editar/">
+            <img src='https://w7.pngwing.com/pngs/740/67/png-transparent-computer-icons-icon-design-edit-angle-computer-data-thumbnail.png' width="30"/>
+        </a>
+        </td>
     </tr>
-
+    {% endfor %}
 </tbody>
 <tfoot></tfoot>
 </table>

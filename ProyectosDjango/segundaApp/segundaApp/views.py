@@ -28,3 +28,12 @@ def recorrerLista(request):
     listaPersonas.append(perso3)
     listaPersonas.append(persona("Maria",22))
     return render(request,"listado.html",{"listap":listaPersonas})
+
+def conHerencia(request):
+    return render(request,"plantillahija.html",{"data":"OK"})
+
+
+def segundaHija(request):
+    return render(request,"hija2.html",{"data":"ok"})
+
+

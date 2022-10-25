@@ -26,5 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',views.index),
     path('nosotros/',views.nosotros),
-    path('listaPersonas/',views.recorrerLista)
+    path('listaPersonas/',views.recorrerLista),
+    path('plantillaHija/',views.conHerencia),
+    path('hija2/',views.segundaHija)
 ]

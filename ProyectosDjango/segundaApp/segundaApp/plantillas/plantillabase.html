@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>
+    
+        {% block title %}
+
+        {% endblock %}
+        
+    </title>
+</head>
+<body>
+{% include "menu.html" %}
+
+<h3>Este es un subtitulo comun para todas las paginas que hereden de base</h3>
+
+{% block contenido %}
+
+{% endblock %}
+
+</body>
+</html>
