@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'RentaCar.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'rentacar',
+        'USER': 'postgres',
+        'PASSWORD':'123456',
+        'HOST': 'localhost',
+        'PORT': '5434'
     }
 }
 

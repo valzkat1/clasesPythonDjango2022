@@ -11,4 +11,7 @@ class Clientes(models.Model):
 class Tipos(models.Model):
     nombre=models.CharField(max_length=20)
     descripcion=models.CharField(max_length=100)
+    
+    
+ ## C R U D   
 
