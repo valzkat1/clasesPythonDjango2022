@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.db import models
 
 # Create your models here.
@@ -5,14 +6,14 @@ class Clientes(models.Model):
     nombre=models.CharField(max_length=50)
     edad=models.IntegerField()
     email=models.EmailField(blank=True,null=True)
-    fechaNacimi=models.DateField()
+    fechaNacimi=models.DateField(verbose_name="Fecha Nacimiento")
     def __str__(self):
         return 'Nombre: %s, Edad: %s, Email: %s, FechaN: %s'%(self.nombre,self.edad,self.email,self.fechaNacimi)
     
     
 
 class Tipos(models.Model):
-    nombre=models.CharField(max_length=20)
+    nombre=models.CharField(max_length=20,verbose_name="Tipo Cliente")
     descripcion=models.CharField(max_length=100)
     def __str__(self):
         return 'Tipo: %s, Descripcion: %s '%(self.nombre,self.descripcion)
