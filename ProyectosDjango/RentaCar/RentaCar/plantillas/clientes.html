@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Formulario de Clientes</title>
 <style>
 
     .estilosCss{
         background-color: blue;
-        font-size: medium;        
+        font-size: medium;  
+        color:white     
     }
 
 </style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
 </head>
 <body>
-<form  action="/clientesGuardar" method="POST" id="formularioClientes" class="estilosCss">
+
+    <div class="container">
+
+<form  action="/resultado/" method="GET" id="formularioClientes" >
 
     <label>Digite el Nombre del cliente</label>
-    <input  type="text" name="nombre" id="clienteNomb" />
+    <input  type="text" name="nombre" id="clienteNomb" class="form-control"/>
+    <br/>
     <label>Edad</label>
-    <input name="edad" id="clienteEdad" />
+    <input type="number"  name="edad" id="clienteEdad" class="form-control"/>
+<br/>
 
-
-    <input type="submit">Enviar</input>
+    <input type="submit" class="btn btn-primary">Enviar</input>
 
 
 
 
 </form>
-
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 </body>
 

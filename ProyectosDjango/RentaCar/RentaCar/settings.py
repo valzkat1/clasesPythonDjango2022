@@ -55,7 +55,7 @@ ROOT_URLCONF = 'RentaCar.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['E:/BVC/reposa2censo/clasesPythonDjango2022/ProyectosDjango/RentaCar/RentaCar/plantillas/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
