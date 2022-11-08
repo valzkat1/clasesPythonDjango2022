@@ -7,15 +7,15 @@
 <div class="container">
 
     <h2>Editar clientes</h2>
-    <form>
+    <form method="POST" action="/editarCliente/">{% csrf_token %}
         <label>Nombre</label>
-        <input type="text" class="form-control" name="nombre" > 
+        <input type="text" class="form-control" name="nombre" value="{{ cliente.nombre }}"> 
         <label>Edad</label>
-        <input type="number" class="form-control" name="edad">
+        <input type="number" class="form-control" name="edad" value="{{ cliente.edad }}">
         <label>Email</label>
-        <input type="email" class="form-control" name="email">
+        <input type="email" class="form-control" name="email" value="{{ cliente.email }}">
         <label>Fecha</label>
-        <input type="date" class="form-control" name="fechaNacimi">
+        <input type="date" class="form-control" name="fechaNacimi" value="{{ cliente.fechaNacimi }}">
         
         <input type="submit" value="Enviar"  class="btn btn-primary" /> 
 

@@ -22,5 +22,11 @@ def resultado(request):
 def listaClientes(request):
     return render(request,"respuesta.html",{"clientes":Clientes.objects.filter()})    
 
-def editarCli(request):
-    return render(request,"editarClientes.html",{})
+def editarCli(request):    
+    id_=request.GET['id']
+    objClienteEditar=Clientes.objects.get(id=id_)    
+    return render(request,"editarClientes.html",{"cliente":objClienteEditar})
+
+def editarCliente(request):
+    
+    return render(request,"respuesta.html",{"clientes":Clientes.objects.filter()})
