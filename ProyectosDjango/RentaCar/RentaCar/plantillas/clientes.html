@@ -20,13 +20,12 @@
 
     <div class="container">
 
-<form  action="/resultado/" method="GET" id="formularioClientes" >
+<form  action="/resultado/" method="POST" id="formularioClientes" > {% csrf_token %}
 
     <label>Digite el Nombre del cliente</label>
     <input  type="text" name="nombre" id="clienteNomb" class="form-control"/>
     <br/>
-    <label>Edad</label>
-    <input type="number"  name="edad" id="clienteEdad" class="form-control"/>
+    
 <br/>
 
     <input type="submit" class="btn btn-primary">Enviar</input>

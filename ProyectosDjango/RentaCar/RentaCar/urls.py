@@ -20,5 +20,7 @@ from clientes import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('clientes/',views.index),
-    path('resultado/',views.resultado)
+    path('resultado/',views.resultado),
+    path('listarCli/',views.listaClientes),
+    path('editarCli/',views.editarCli)
 ]

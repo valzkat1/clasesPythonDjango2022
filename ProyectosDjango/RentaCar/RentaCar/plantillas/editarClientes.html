@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block titulo %} Editar clientes  {% endblock %}
+
+{% block contenido %}
+
+<div class="container">
+
+    <h2>Editar clientes</h2>
+    <form>
+        <label>Nombre</label>
+        <input type="text" class="form-control" name="nombre" > 
+        <label>Edad</label>
+        <input type="number" class="form-control" name="edad">
+        <label>Email</label>
+        <input type="email" class="form-control" name="email">
+        <label>Fecha</label>
+        <input type="date" class="form-control" name="fechaNacimi">
+        
+        <input type="submit" value="Enviar"  class="btn btn-primary" /> 
+
+
+    </form>
+
+</div>
+
+
+{% endblock %}
