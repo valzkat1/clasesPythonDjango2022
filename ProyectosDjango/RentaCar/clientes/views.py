@@ -22,11 +22,20 @@ def resultado(request):
 def listaClientes(request):
     return render(request,"respuesta.html",{"clientes":Clientes.objects.filter()})    
 
-def editarCli(request):    
+def editarCliForm(request):    
     id_=request.GET['id']
     objClienteEditar=Clientes.objects.get(id=id_)    
     return render(request,"editarClientes.html",{"cliente":objClienteEditar})
 
-def editarCliente(request):
-    
+def editarClienteGuardar(request):    
+    objClient=Clientes(nombre=request.POST['nombre'],edad=request.POST['edad'],email=request.POST['email'],fechaNacimi=request.POST['fechaNacimi'],id=request.POST['id'])
+    objClient.save()
+    return render(request,"respuesta.html",{"clientes":Clientes.objects.filter()})
+
+def crearClienteForm(request):
+    return render(request,"crearClientes.html",{"mesanje":"OK"})
+
+def crearClienteGuardar(request):
+    objeClienteNew=Clientes(nombre=request.POST['nombre'],edad=request.POST['edad'],email=request.POST['email'],fechaNacimi=request.POST['fechaNacimi'])
+    objeClienteNew.save()
     return render(request,"respuesta.html",{"clientes":Clientes.objects.filter()})

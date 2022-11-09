@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block titulo %} Editar clientes  {% endblock %}
+
+{% block contenido %}
+
+<div class="container">
+
+    <h2>Crear clientes</h2>
+    <form method="POST" action="/crearClienteGuardar/">{% csrf_token %}
+        
+        <label>Nombre</label>
+        <input type="text" class="form-control" name="nombre" value=""> 
+        <label>Edad</label>
+        <input type="number" class="form-control" name="edad" value="">
+        <label>Email</label>
+        <input type="email" class="form-control" name="email" value="">
+        <label>Fecha</label>
+        <input type="date" class="form-control" name="fechaNacimi" value="">
+        
+        <label>Genero</label>
+        <select name="genero" class="form-select">
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+            <option value="O">Otros</option>
+        </select>
+
+        <input type="submit" value="Enviar"  class="btn btn-primary" /> 
+
+
+    </form>
+
+</div>
+
+
+{% endblock %}

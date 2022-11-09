@@ -8,6 +8,7 @@
 
     <h2>Editar clientes</h2>
     <form method="POST" action="/editarCliente/">{% csrf_token %}
+        <input type="hidden" name="id" value="{{ cliente.id }}"/>
         <label>Nombre</label>
         <input type="text" class="form-control" name="nombre" value="{{ cliente.nombre }}"> 
         <label>Edad</label>

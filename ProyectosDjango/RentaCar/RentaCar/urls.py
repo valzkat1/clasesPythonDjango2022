@@ -22,6 +22,8 @@ urlpatterns = [
     path('clientes/',views.index),
     path('resultado/',views.resultado),
     path('listarCli/',views.listaClientes),
-    path('editarCli/',views.editarCli),
-    path('editarCliente/',views.editarCliente)
+    path('editarCli/',views.editarCliForm),
+    path('editarCliente/',views.editarClienteGuardar),
+    path('crearCliente/',views.crearClienteForm),
+    path('crearClienteGuardar/',views.crearClienteGuardar)
 ]
