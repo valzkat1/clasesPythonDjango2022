@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block titulo %} Formulario de Contacto  {% endblock %}
+
+{% block contenido %}
+
+<div class="container">
+
+    <h2>Habla con nosotros</h2>
+    <form method="POST" action="/contacto/">{% csrf_token %}
+        
+        <label>Nombre</label>
+        <input type="text" class="form-control" name="nombre" value=""> 
+        <label>Email</label>
+        <input type="email" class="form-control" name="email" value="">
+
+        <label>Asunto</label>
+        <input type="text" class="form-control" name="asunto" value="">
+        
+        <label>Mensaje</label>
+        <textarea class="form-control" name="mensaje" rows="5" ></textarea>
+
+        <input type="submit" value="Enviar"  class="btn btn-primary" /> 
+
+
+    </form>
+
+</div>
+
+
+{% endblock %}
