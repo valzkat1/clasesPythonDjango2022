@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from clientes.models import Clientes
 from django.core.mail import send_mail
-
+from clientes.forms import FormularioContacto
 
 # REQUEST
 # GET  POST
@@ -54,3 +54,19 @@ def contacto(request):
         return render(request,"procesoExitoso.html")
     else:
         return render(request,"contacto.html")
+
+
+def contacto2(request):
+    if request.method=='POST':
+        miFomulario=FormularioContacto(request.POST)
+        if miFomulario.is_valid():
+            print("Informacion correcta.")
+            datosForm=miFomulario.cleaned_data
+            send_mail(datosForm.get('asunto')+" "+datosForm.get('email'),datosForm.get('mensaje'),"valzkat12@gmail.com",['valzkat12@gmail.com'],fail_silently=False)
+        else:
+            print("Error en los datos")
+        return render(request,"procesoExitoso.html")  
+    else:
+        return render(request,"contacto.html")  
+        
+
