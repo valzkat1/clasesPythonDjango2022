@@ -63,10 +63,13 @@ def contacto2(request):
             print("Informacion correcta.")
             datosForm=miFomulario.cleaned_data
             send_mail(datosForm.get('asunto')+" "+datosForm.get('email'),datosForm.get('mensaje'),"valzkat12@gmail.com",['valzkat12@gmail.com'],fail_silently=False)
+            return render(request,"procesoExitoso.html")  
         else:
             print("Error en los datos")
-        return render(request,"procesoExitoso.html")  
+            return render(request,"errores.html",{"tituloError":"Validacion formulario","contenidoError":"La informacion no tiene el formato correcto."})  
+        
     else:
-        return render(request,"contacto.html")  
+        miFomulario=FormularioContacto()
+        return render(request,"plantillaFormularios.html",{"tituloFormulario":"Formulario de Contacto","actionFormulario":"contacto2","contenidoFormulario":miFomulario.as_div})  
         
 

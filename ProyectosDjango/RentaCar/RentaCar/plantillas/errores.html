@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block titulo %} Error  {% endblock %}
+
+{% block contenido %}
+
+<div class="container">
+
+    <center><h2>{{ tituloError }}</h2></center>
+
+       {{ contenidoError }} 
+
+       <button type="submit" onclick="regresar()" class="btn btn-primary">Regresar</button>
+
+
+</div>
+
+
+{% endblock %}

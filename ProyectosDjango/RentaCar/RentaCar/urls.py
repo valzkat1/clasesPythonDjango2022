@@ -19,6 +19,7 @@ from clientes import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',views.index),
     path('clientes/',views.index),
     path('resultado/',views.resultado),
     path('listarCli/',views.listaClientes),
