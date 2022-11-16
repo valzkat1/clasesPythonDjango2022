@@ -66,7 +66,8 @@ def contacto2(request):
             return render(request,"procesoExitoso.html")  
         else:
             print("Error en los datos")
-            return render(request,"errores.html",{"tituloError":"Validacion formulario","contenidoError":"La informacion no tiene el formato correcto."})  
+            print(miFomulario.errors)
+            return render(request,"plantillaFormularios.html",{"tituloFormulario":"Formulario de Contacto","actionFormulario":"contacto2","contenidoFormulario":miFomulario.as_div,"errores":miFomulario.errors})  
         
     else:
         miFomulario=FormularioContacto()
