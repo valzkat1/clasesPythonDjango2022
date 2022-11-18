@@ -1,0 +1,18 @@
+{% extends 'comunes/base.html' %} 
+
+{% block titulo %}  {% endblock %}
+
+  {% block contenido %}
+
+ <div class="container">
+    <center> <h2> {{ tituloFormulario }}  </h2> </center>
+    <form method="POST" action="{{ actionFormulario }}">
+
+        {{ contenidoFormulario }}
+
+    </form>
+ </div>
+
+ {% endblock %}
+
+
