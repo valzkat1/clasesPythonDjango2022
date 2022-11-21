@@ -7,7 +7,7 @@
  <div class="container">
     <center> <h2> {{ tituloFormulario }}  </h2> </center>
     <form method="POST" action="{{ actionFormulario }}">
-
+      {% csrf_token %}
         {{ contenidoFormulario }}
 
 

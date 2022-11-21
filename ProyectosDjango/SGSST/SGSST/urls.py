@@ -24,6 +24,6 @@ from Ausentismos import views as vistaAusentismos
 urlpatterns = [ 
     path('admin/', admin.site.urls),
     path('usuarios/',include('Usuarios.urls')),    
-    path('empelados/',include('Empleados.urls')),    
+    path('empleados/',include('Empleados.urls')),    
     path('ausentismos/',include('Ausentismos.urls'))
 ]

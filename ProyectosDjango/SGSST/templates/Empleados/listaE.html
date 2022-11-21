@@ -7,22 +7,28 @@
  <div class="container">
     <center> <h2> {{ tituloListado }}  </h2> </center>
 
-    <div style="float:right"><a href="/usuarios/crear/"> <input type="button" value="Crear" class="btn btn-secondary"/></a> </div>
+    <div style="float:right"><a href="/empleados/crear/"> <input type="button" value="Crear" class="btn btn-secondary"/></a> </div>
         <table class="table">
             <thead>
-                <th>Nombre Usuario</th>
-                <th>Rol</th>
-                <th>idEmpleado</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>ID</th>
+                <th>Cargo</th>
+                <th>ARL</th>
+                <th>EPS</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
             </thead>
             
             <tbody>
-                {% for user in lista %}
+                {% for emp in lista %}
                     <tr>
-                        <td>{{user.nombreusuario}}</td>
-                        <td>{{user.rol}}</td>
-                        <td>{{user.idEmpleado}}</td>
+                        <td>{{emp.nombre}}</td>
+                        <td>{{emp.apellidos}}</td>
+                        <td>{{emp.identificacion}}</td>
+                        <td>{{emp.cargo}}</td>
+                        <td>{{emp.doc_arl}}</td>
+                        <td>{{emp.doc_eps}}</td>
                         <td><input type="button" value="Editar" class="btn btn-success"/></td>
                         <td><input type="button" value="Eliminar" class="btn btn-danger"/></td>
                     </tr>    
