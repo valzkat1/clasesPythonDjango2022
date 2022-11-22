@@ -23,8 +23,8 @@
                         <td>{{user.nombreusuario}}</td>
                         <td>{{user.rol}}</td>
                         <td>{{user.idEmpleado}}</td>
-                        <td><input type="button" value="Editar" class="btn btn-success"/></td>
-                        <td><input type="button" value="Eliminar" class="btn btn-danger"/></td>
+                        <td><a href="/usuarios/editar?id={{user.id}}"><input type="button" value="Editar" class="btn btn-success" /></td>
+                        <td><input type="button" value="Eliminar" class="btn btn-danger" onclick="confirmarEliminacion()"/></td>
                     </tr>    
                 {% endfor  %}
 
@@ -36,4 +36,15 @@
 
  </div>
  
+ <script>
+ function alerta(){
+    alert("Esto es una alerta disparada por el evento click de un boton");
+ }
+
+ function confirmarEliminacion(){
+    return confirm("Esta seguro de eliminar el registro");
+ }
+ </script>
+
+
  {% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'comunes/base.html' %} 
+
+{% block titulo %}  {% endblock %}
+
+  {% block contenido %}
+
+ <div class="container">
+    <center> <h2> {{ tituloFormulario }}  </h2> </center>
+    <form method="POST" action="{{ actionFormulario }}">
+      {% csrf_token %}
+
+      <input type="hidden" name="id" value="{{id}}"/>
+
+        {{ contenidoFormulario }}
+
+
+      <hr/>
+      <center> <input type="submit" value="Enviar" class="btn btn-primary"/> </center>
+
+    </form>
+ </div>
+
+ {% endblock %}
+
+

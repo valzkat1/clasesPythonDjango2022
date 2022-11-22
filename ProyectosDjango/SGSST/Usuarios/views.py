@@ -18,4 +18,18 @@ def listarUsuarios(request):
     return render(request,'Usuarios/listarU.html',{"tituloListado":"Lista de Usuarios","lista":usuario.objects.filter()})    
     
 
+def edicionUsuarios(request):
+    if request.method=='POST':
+        id_=request.POST['id']
+        UsuarioEditado=usuario.objects.get(id=id_) 
+        miFormulario=FormularioUser(request.POST,instance=UsuarioEditado)
+        if miFormulario.is_valid():
+            miFormulario.save()            
+            return redirect("listaUsu")
+    else:  
+        id_=request.GET['id']
+        UsuarioEditado=usuario.objects.get(id=id_) 
+        miFormulario=FormularioUser(instance=UsuarioEditado) 
+        contexto={"tituloFomulario":"Editar Clientes","actionFormulario":"/usuarios/editar/","contenidoFormulario":miFormulario.as_div(),"id":id_}
+        return render(request,"comunes/formulariosE.html",contexto)
 

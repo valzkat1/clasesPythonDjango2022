@@ -3,6 +3,7 @@ from Usuarios import views
 
 urlpatterns = [ 
                 path('crear/',views.crearUsuarios), 
-                path('listar/',views.listarUsuarios,name="listaUsu")              
+                path('listar/',views.listarUsuarios,name="listaUsu"),
+                path('editar/',views.edicionUsuarios,name="editaUsu")              
 
 ]
