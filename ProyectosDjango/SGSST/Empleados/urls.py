@@ -4,7 +4,8 @@ from Empleados import views
 urlpatterns = [
     
     path('crear/',views.crearEmpleado),
-    path('listar/',views.listarEmpleados)
+    path('listar/',views.listarEmpleados,name="listarEmp"),
+    path('editar/',views.editarEmpleados,name="editarEmp")
     
 ]
 

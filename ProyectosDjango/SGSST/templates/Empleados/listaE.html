@@ -23,13 +23,13 @@
             <tbody>
                 {% for emp in lista %}
                     <tr>
-                        <td>{{emp.nombre}}</td>
+                        <td>{{emp.nombres}}</td>
                         <td>{{emp.apellidos}}</td>
                         <td>{{emp.identificacion}}</td>
                         <td>{{emp.cargo}}</td>
                         <td>{{emp.doc_arl}}</td>
                         <td>{{emp.doc_eps}}</td>
-                        <td><input type="button" value="Editar" class="btn btn-success"/></td>
+                        <td><a href="/empleados/editar?id={{emp.id}}"><input type="button" value="Editar" class="btn btn-success"/></a></td>
                         <td><input type="button" value="Eliminar" class="btn btn-danger"/></td>
                     </tr>    
                 {% endfor  %}

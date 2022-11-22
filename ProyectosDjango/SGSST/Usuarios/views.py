@@ -33,3 +33,9 @@ def edicionUsuarios(request):
         contexto={"tituloFomulario":"Editar Clientes","actionFormulario":"/usuarios/editar/","contenidoFormulario":miFormulario.as_div(),"id":id_}
         return render(request,"comunes/formulariosE.html",contexto)
 
+
+def eliminarUsuario(request):
+    id_=request.GET['id']
+    usuarioEliminar= usuario.objects.get(id=id_)
+    usuarioEliminar.delete()
+    return redirect("listaUsu")
