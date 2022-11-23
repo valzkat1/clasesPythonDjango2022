@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'SGSST.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'bd_sgsst',
+        'NAME': 'bd_sgsst_2.0',
         'USER': 'postgres',
         'PASSWORD': '123456',
         'HOST': 'localhost',

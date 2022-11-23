@@ -30,7 +30,7 @@
                         <td>{{emp.doc_arl}}</td>
                         <td>{{emp.doc_eps}}</td>
                         <td><a href="/empleados/editar?id={{emp.id}}"><input type="button" value="Editar" class="btn btn-success"/></a></td>
-                        <td><input type="button" value="Eliminar" class="btn btn-danger"/></td>
+                        <td><a href="/empleados/eliminar?id={{emp.id}}"><input type="button" value="Eliminar" class="btn btn-danger"/></a></td>
                     </tr>    
                 {% endfor  %}
 

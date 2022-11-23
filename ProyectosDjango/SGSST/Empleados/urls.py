@@ -5,7 +5,8 @@ urlpatterns = [
     
     path('crear/',views.crearEmpleado),
     path('listar/',views.listarEmpleados,name="listarEmp"),
-    path('editar/',views.editarEmpleados,name="editarEmp")
+    path('editar/',views.editarEmpleados,name="editarEmp"),
+    path('eliminar/',views.eliminarEmpleado)
     
 ]
 

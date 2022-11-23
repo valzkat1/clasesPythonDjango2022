@@ -31,3 +31,9 @@ def editarEmpleados(request):
         EmpleadoEditado = empleado.objects.get(id=id_)
         miFormulario = FormularioEmp(instance=EmpleadoEditado)
         return render(request,"comunes/formulariosE.html",{"tituloFormulario":"Editar Empleados","actionFormulario":"/empleados/editar/","contenidoFormulario":miFormulario.as_div(),"id":id_})     
+    
+def eliminarEmpleado(request):
+    id_=request.GET['id']
+    objetoEliminar=empleado.objects.get(id=id_)
+    objetoEliminar.delete()
+    return redirect("listarEmp")

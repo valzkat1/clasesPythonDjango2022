@@ -1,4 +1,5 @@
 from django import forms
+from Ausentismos.models import ausentismo
 
 class FormularioAusentismos(forms.Form):
     nombres=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
@@ -12,3 +13,14 @@ class FormularioAusentismos(forms.Form):
     salarioDia=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
     fechaInicial=forms.DateField(widget=forms.DateInput(attrs={'class':'form-control'}))
     fechaFinal=forms.DateField(widget=forms.DateInput(attrs={'class':'form-control'}))
+    
+
+class FormularioIncapacidades(forms.ModelForm):    
+    class Meta:
+        model = ausentismo
+        fields = '__all__'
+        
+    def __init__(self, *args, **kwargs):
+        super().__init__( *args, **kwargs)
+        for field in self.fields.values():
+            field.widget.attrs['class']="form-control"       
