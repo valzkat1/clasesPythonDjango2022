@@ -12,10 +12,26 @@
 
 
       <hr/>
-      <center> <input type="submit" value="Enviar" class="btn btn-primary"/> </center>
+      <center> <input type="submit" value="Enviar" class="btn btn-primary" onmouseover="calcularSalarioDia()" /> </center>
 
     </form>
  </div>
+
+<script>
+
+  function calcularSalarioDia(){
+
+    var salario=document.getElementById('id_salario');
+    var salarioDia=document.getElementById('id_salarioDia');
+    var totalDia=salario.value/30;
+    salarioDia.value=totalDia;
+
+    console.log("Calculo salario x Dia: *** ",totalDia);
+
+  }
+
+
+</script>
 
  {% endblock %}
 

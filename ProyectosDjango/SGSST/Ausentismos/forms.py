@@ -22,5 +22,13 @@ class FormularioIncapacidades(forms.ModelForm):
         
     def __init__(self, *args, **kwargs):
         super().__init__( *args, **kwargs)
+        self.fields['salario'].widget.attrs['onblur'] = 'calcularSalarioDia()'
+        self.fields['salarioDia'].widget.attrs['readonly']='readonly'
+       # self.fields['totalEmpresa'].widget = forms.HiddenInput()
+       # self.fields['totalArl'].widget = forms.HiddenInput()
+       # self.fields['totalAFP'].widget = forms.HiddenInput()
+       # self.fields['totalEPS'].widget = forms.HiddenInput()
+       # self.fields['totalIncapacidad'].widget = forms.HiddenInput()
+        #self.fields['fechaInicial'].widget = forms.DateInput(attrs={'class':'form-control'})
         for field in self.fields.values():
             field.widget.attrs['class']="form-control"       

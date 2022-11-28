@@ -1,0 +1,49 @@
+{% extends '../comunes/base.html' %} 
+
+{% block titulo %}  {% endblock %}
+
+  {% block contenido %}
+
+ <div class="container">
+    <center> <h2> {{ tituloListado }}  </h2> </center>
+
+    <div style="float:right"><a href="/empleados/crear/"> <input type="button" value="Crear" class="btn btn-secondary"/></a> </div>
+        <table class="table">
+            <thead>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>ID</th>
+                <th>Cargo</th>
+                <th>TipoIncapacidad</th>
+                <th>Salario</th>
+                <th>TotalDias</th>
+                <th>Clasificacion</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </thead>
+            
+            <tbody>
+                {% for emp in lista %}
+                    <tr>
+                        <td>{{emp.nombres}}</td>
+                        <td>{{emp.apellidos}}</td>
+                        <td>{{emp.identificacion}}</td>
+                        <td>{{emp.cargo}}</td>
+                        <td>{{emp.tipoIncapacidad}}</td>
+                        <td>{{emp.salario}}</td>
+                        <td>{{emp.totalDias}}</td>
+                        <td>{{emp.clasificacion}}</td>
+                        <td><a href="/ausentismos/editar?id={{emp.id}}"><input type="button" value="Editar" class="btn btn-success"/></a></td>
+                        <td><a href="/ausentismos/eliminar?id={{emp.id}}"><input type="button" value="Eliminar" class="btn btn-danger"/></a></td>
+                    </tr>    
+                {% endfor  %}
+
+            </tbody>
+
+        </table>    
+
+
+
+ </div>
+ 
+ {% endblock %}
