@@ -24,7 +24,7 @@
     var salario=document.getElementById('id_salario');
     var salarioDia=document.getElementById('id_salarioDia');
     var totalDia=salario.value/30;
-    salarioDia.value=totalDia;
+    salarioDia.value=totalDia.toFixed(3);
 
     console.log("Calculo salario x Dia: *** ",totalDia);
 
