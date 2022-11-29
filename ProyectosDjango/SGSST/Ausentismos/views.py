@@ -39,3 +39,10 @@ def editarAusentismo(request):
         objIncapacidad=ausentismo.objects.get(id=id_)
         miFormulario=FormularioIncapacidades(instance=objIncapacidad)
         return render(request,"Ausentismos/editar.html",{"tituloFormulario":"Editar Incapacidades","actionFormulario":"/ausentismos/editar/","contenidoFormulario":miFormulario,"id":id_})
+    
+
+def eliminarAusentismo(request):
+    id_=request.GET['id']
+    objIncapacidad=ausentismo.objects.get(id=id_)
+    objIncapacidad.delete()
+    return redirect("listarInca")    

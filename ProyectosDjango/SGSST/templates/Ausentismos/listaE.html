@@ -34,7 +34,7 @@
                         <td>{{emp.totalDias}}</td>
                         <td>{{emp.clasificacion}}</td>
                         <td><a href="/ausentismos/editar?id={{emp.id}}"><input type="button" value="Editar" class="btn btn-success"/></a></td>
-                        <td><a href="/ausentismos/eliminar?id={{emp.id}}"><input type="button" value="Eliminar" class="btn btn-danger"/></a></td>
+                        <td><input type="button" value="Eliminar" class="btn btn-danger" onclick="confirmarEliminacion({{emp.id}})"/></td>
                     </tr>    
                 {% endfor  %}
 
@@ -46,4 +46,16 @@
 
  </div>
  
+<script>
+
+    function confirmarEliminacion(idUsu){
+        if(confirm("Esta seguro de eliminar el registro")){
+            window.location.href="/ausentismos/eliminar?id="+idUsu;
+        }
+    }
+
+
+</script>
+
+
  {% endblock %}
